@@ -22,7 +22,7 @@ body {
   padding-bottom: 20px;
   font-size: 3vw;
   color: #fff;
-  background: #3c0008 url("/assets/images/bg.jpg") center/100% 100% no-repeat;
+  background: #3c0008 url("./assets/images/bg.jpg") center/100% 100% no-repeat;
   position: relative;
 }
 
@@ -91,7 +91,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("/assets/images/Leaderboard and guide bg.png") center/100%
+  background: url("./assets/images/Leaderboard and guide bg.png") center/100%
     100% no-repeat;
 }
 .leaderboard-container {
@@ -104,7 +104,7 @@ header img {
   display: flex !important;
 }
 .reward-container {
-  background: url("/assets/images/Rewards bg.png") center/100% 100% no-repeat;
+  background: url("./assets/images/Rewards bg.png") center/100% 100% no-repeat;
   margin-bottom: 20px;
 }
 .modal-container > img,
@@ -137,7 +137,7 @@ main,
 
 .rewards-tab .tab-header,
 .leaderboard-tab > .tab-header {
-  background: url("/assets/images/Talent user btn bg.png") center/100% 100%
+  background: url("./assets/images/Talent user btn bg.png") center/100% 100%
     no-repeat;
   height: 45px;
   width: 70%;
@@ -166,11 +166,11 @@ main,
 }
 
 .tab-button.user.active {
-  background: url("/assets/images/btn/User btn.png") center/100% 100% no-repeat;
+  background: url("./assets/images/btn/User btn.png") center/100% 100% no-repeat;
 }
 
 .tab-button.talent.active {
-  background: url("/assets/images/btn/Talent btn.png") center/100% 100%
+  background: url("./assets/images/btn/Talent btn.png") center/100% 100%
     no-repeat;
 }
 
@@ -204,22 +204,22 @@ main,
 }
 
 .tab-button.round-1 {
-  background: url("/assets/images/Round 1 unselect btn.png") center/100% 100%
+  background: url("./assets/images/Round 1 unselect btn.png") center/100% 100%
     no-repeat;
 }
 
 .tab-button.round-2 {
-  background: url("/assets/images/Round 2 unselect btn.png") center/100% 100%
+  background: url("./assets/images/Round 2 unselect btn.png") center/100% 100%
     no-repeat;
 }
 
 .tab-button.round-1.active {
-  background: url("/assets/images/btn/Round 1 select btn.png") center/100% 100%
+  background: url("./assets/images/btn/Round 1 select btn.png") center/100% 100%
     no-repeat;
 }
 
 .tab-button.round-2.active {
-  background: url("/assets/images/btn/Round 2 select btn.png") center/100% 100%
+  background: url("./assets/images/btn/Round 2 select btn.png") center/100% 100%
     no-repeat;
 }
 
@@ -231,7 +231,7 @@ main,
   justify-content: center;
   padding-inline: 10px;
   min-width: 100%;
-  background: url("/assets/images/Rewards diaplay bg.png") center/100% 100%
+  background: url("./assets/images/Rewards diaplay bg.png") center/100% 100%
     no-repeat;
   position: relative;
 }
@@ -241,7 +241,7 @@ main,
   display: grid;
   font-weight: 600;
   place-items: center;
-  background: url("/assets/images/rank display.png") center/100% 100% no-repeat;
+  background: url("./assets/images/rank display.png") center/100% 100% no-repeat;
   position: absolute;
   top: 0;
   left: 50%;
@@ -300,7 +300,7 @@ main,
   height: 45px;
   margin-inline: 8px;
   margin-bottom: 10px;
-  background: url("/assets/images/Category btn bg.png") center/100% 100%
+  background: url("./assets/images/Category btn bg.png") center/100% 100%
     no-repeat;
 }
 .category-tab-header {
@@ -313,14 +313,15 @@ main,
 }
 
 .tab-button.dance.active {
-  background: url("/assets/images/btn/Dance btn.png") center/100% 100% no-repeat;
+  background: url("./assets/images/btn/Dance btn.png") center/100% 100%
+    no-repeat;
 }
 .tab-button.singing.active {
-  background: url("/assets/images/btn/Singing battle btn.png") center/100% 100%
+  background: url("./assets/images/btn/Singing battle btn.png") center/100% 100%
     no-repeat;
 }
 .tab-button.fashion.active {
-  background: url("/assets/images/btn/fashion battle btn.png") center/100% 100%
+  background: url("./assets/images/btn/fashion battle btn.png") center/100% 100%
     no-repeat;
 }
 .schedule-tab .tab-content {
@@ -341,7 +342,7 @@ main,
   padding-inline: 0;
   /* height: 300px; */
   padding-bottom: 12px;
-  background: url("/assets/images/Schedule bg.png") center/100% 100% no-repeat;
+  background: url("./assets/images/Schedule bg.png") center/100% 100% no-repeat;
 }
 .schedule-tab .tab-content.active {
   padding-block: 60px;
@@ -365,7 +366,7 @@ main,
   padding-inline: 20px;
   padding-block: 4px;
   justify-content: space-between;
-  background: url("/assets/images/Schedule table bg.png") center/100% 100%
+  background: url("./assets/images/Schedule table bg.png") center/100% 100%
     no-repeat;
   font-size: 3vw;
   color: #f6d957;
@@ -390,7 +391,7 @@ main,
 
 .beans-amount {
   width: 56%;
-  background: url("/assets/images/Beans pot amount.png") center/100% 100%
+  background: url("./assets/images/Beans pot amount.png") center/100% 100%
     no-repeat;
   height: 50px;
   font-weight: 600;
@@ -419,16 +420,16 @@ main,
   gap: 10px;
 }
 .topper-container .top-2 {
-  background: url("/assets/images/Top 2 bg.png") center/100% 100% no-repeat;
+  background: url("./assets/images/Top 2 bg.png") center/100% 100% no-repeat;
   margin-top: 18%;
   order: 1;
 }
 .topper-container .top-1 {
-  background: url("/assets/images/Top 1 bg.png") center/100% 100% no-repeat;
+  background: url("./assets/images/Top 1 bg.png") center/100% 100% no-repeat;
   order: 2;
 }
 .topper-container .top-3 {
-  background: url("/assets/images/Top 3 bg.png") center/100% 100% no-repeat;
+  background: url("./assets/images/Top 3 bg.png") center/100% 100% no-repeat;
   margin-top: 18%;
   order: 3;
 }
@@ -482,7 +483,7 @@ main,
   align-items: center;
   padding-inline: 14px;
   /* padding-bottom: 10px; */
-  background: url("/assets/images/4th name onwards strip.png") center/100% 100%
+  background: url("./assets/images/4th name onwards strip.png") center/100% 100%
     no-repeat;
   gap: 1em;
 }
