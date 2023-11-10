@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PK Diwali Utsav</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./sheet.js" defer></script>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!--#region Header -->
+    <header>
+      <img src="/assets/images/Header.png" alt="Header" />
+    </header>
+    <!--endregion Header -->
+
+    <!-- #region Main Section -->
+    <main>
+      <!-- #region Guide Modal -->
+      <button
+        data-modal="guide"
+        class="modal-btn guide-btn"
+        type="button"
+        id="guideBtn"
+        title="Guide"
+      >
+        <img src="/assets/images/btn/Guide-btn.png" alt="Guide" />
+      </button>
+      <!-- #endregion Guide Modal -->
+
+      <!-- #region Rewards Tab -->
+      <section class="tab rewards-tab" id="rewardsTab">
+        <div class="tab-header">
+          <button
+            type="button"
+            data-tab="user"
+            class="tab-button user active"
+            title="User"
+          />
+          <button
+            type="button"
+            data-tab="talent"
+            class="tab-button talent"
+            title="Talent"
+          />
+        </div>
+
+        <div data-tab="user" class="tab-content user active">
+          <div class="rounds-container">
+            <button
+              type="button"
+              data-tab="round-1"
+              class="tab-button round-1 active"
+              title="Round 1"
+            />
+            <button
+              type="button"
+              data-tab="round-2"
+              class="tab-button round-2"
+              title="Round 2"
+            />
+          </div>
+
+          <div class="tab-content reward-container active">
+            <img
+              src="/assets/images/tag/Rewards tag.png"
+              alt="Rewards tag"
+              role="presentation"
+            />
+            <div class="slides reward-slides-container">
+              <div class="reward-slides">
+                <button class="slide-btn prev">
+                  <img
+                    src="/assets/images/btn/LeftArrow.png"
+                    alt="Left Arrow"
+                  />
+                </button>
+                <div class="reward-slide slide active">
+                  <img
+                    src="/assets/images/Rewards/Beans Pot.png"
+                    alt="Beans pot"
+                  />
+                </div>
+                <div class="reward-slide slide">
+                  <img
+                    src="/assets/images/Rewards/Amazon gift card.png"
+                    alt="Beans pot"
+                  />
+                </div>
+                <div class="reward-slide slide">
+                  <img
+                    src="/assets/images/Rewards/Celebration theme.png"
+                    alt="Beans pot"
+                  />
+                </div>
+                <button class="slide-btn next">
+                  <img
+                    src="/assets/images/btn/RightArrow.png"
+                    alt="Right Arrow"
+                  />
+                </button>
+              </div>
+              <div class="info">User recieves 25% of total beans</div>
+            </div>
+          </div>
+
+          <div class="rounds-container">
+            <button
+              type="button"
+              data-tab="round-1"
+              class="tab-button round-1 active"
+              title="Round 1"
+            />
+            <button
+              type="button"
+              data-tab="round-2"
+              class="tab-button round-2"
+              title="Round 2"
+            />
+          </div>
+        </div>
+        <div data-tab="talent" class="tab-content talent">Talent content</div>
+      </section>
+      <!-- #endregion Rewards Tab -->
+
+      <!-- #region Schedule Section -->
+      <section class="tab schedule-tab" id="scheduleTab">
+        <div class="tab-header">
+          <button
+            data-tab="dance"
+            type="button"
+            class="tab-button dance active"
+            title="Dance"
+          />
+          <button
+            data-tab="singing"
+            type="button"
+            class="tab-button singing"
+            title="Signing"
+          />
+          <button
+            data-tab="fashion"
+            type="button"
+            class="tab-button fashion"
+            title="Fashion"
+          />
+        </div>
+
+        <div data-tab="dance" class="tab-content dance-container active">
+          <div class="table">
+            <div class="table-header">
+              <div>
+                <span>Date</span>
+                <span>Player 1</span>
+              </div>
+              <img
+                class="vs-image"
+                src="/assets/images/Vs.png"
+                alt="Vs"
+                role="presentation"
+              />
+              <div>
+                <span>Player 2</span>
+                <span>Time</span>
+              </div>
+            </div>
+
+            <template id="table-desc">
+              <div class="table-desc">
+                <div>
+                  <span class="date">Date</span>
+                  <div>
+                    <span class="player-1-name">Talent Name</span>
+                    <br />
+                    <span class="player-1-id">ID: 00000000</span>
+                  </div>
+                </div>
+                <img
+                  class="vs-image"
+                  src="/assets/images/Vs.png"
+                  alt="Vs"
+                  role="presentation"
+                />
+                <div>
+                  <div>
+                    <span class="player-2-name">Talent Name</span>
+                    <br />
+                    <span class="player-2-id">ID: 00000000</span>
+                  </div>
+                  <span class="time">Time</span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <div data-tab="singing" class="tab-content singing-container">
+          Singing Schedule Tab
+        </div>
+        <div data-tab="fashion" class="tab-content fashion-container">
+          Fashion Schedule Tab
+        </div>
+      </section>
+      <!-- #endregion Schedule Section -->
+
+      <!-- #region Leadboard Section -->
+      <section class="tab leaderboard-tab" id="leaderboardsTab">
+        <div class="tab-header">
+          <button
+            type="button"
+            data-tab="user"
+            class="tab-button user active"
+            title="User"
+          />
+          <button
+            type="button"
+            data-tab="talent"
+            class="tab-button talent"
+            title="Talent"
+          />
+        </div>
+        <div class="rounds-container">
+          <button
+            type="button"
+            data-tab="round-1"
+            class="tab-button round-1 active"
+            title="Round 1"
+          />
+          <button
+            type="button"
+            data-tab="round-2"
+            class="tab-button round-2"
+            title="Round 2"
+          />
+        </div>
+        <div
+          data-tab="user"
+          class="tab-content leaderboard-container user active"
+        >
+          <img
+            class="tag schedule"
+            src="/assets/images/tag/Leaderboard tag.png"
+            alt="Leaderboard tag"
+            role="presentation"
+          />
+
+          <div class="beans-amount">000,000,00</div>
+
+          <div class="topper-container">
+            <div class="top top-1">
+              <div class="avatar">
+                <img src="/assets/images/default-avtar.png" alt="avatar" />
+              </div>
+              <div class="info">
+                <span class="name">Name</span>
+                <span class="id">ID</span>
+                <span>
+                  <span class="beans"></span>
+                  <img
+                    class="bean-img"
+                    src="/assets/images/Beans icon.png"
+                    alt="beans"
+                    role="presentation"
+                  />
+                </span>
+              </div>
+            </div>
+
+            <div class="top top-2">
+              <div class="avatar">
+                <img src="/assets/images/default-avtar.png" alt="avatar" />
+              </div>
+              <div class="info">
+                <span class="name">Name</span>
+                <span class="id">ID</span>
+                <span>
+                  <span class="beans"></span>
+                  <img
+                    class="bean-img"
+                    src="/assets/images/Beans icon.png"
+                    alt="beans"
+                    role="presentation"
+                  />
+                </span>
+              </div>
+            </div>
+
+            <div class="top top-3">
+              <div class="avatar">
+                <img src="/assets/images/default-avtar.png" alt="avatar" />
+              </div>
+              <div class="info">
+                <span class="name">Name</span>
+                <span class="id">ID</span>
+                <span>
+                  <span class="beans"></span>
+                  <img
+                    class="bean-img"
+                    src="/assets/images/Beans icon.png"
+                    alt="beans"
+                    role="presentation"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="winner-container">
+            <template id="winner-strip">
+              <div class="winner-strip">
+                <span class="position"></span>
+                <div class="avatar">
+                  <img src="/assets/images/default-avtar.png" alt="avatar" />
+                </div>
+                <div class="info">
+                  <span class="name"></span>
+                  <span class="id"></span>
+                </div>
+                <span>
+                  <span class="beans"></span>
+                  <img
+                    class="bean-img"
+                    src="/assets/images/Beans icon.png"
+                    alt="beans"
+                    role="presentation"
+                  />
+                </span>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <div data-tab="talent" class="tab-content talent">Talent content</div>
+      </section>
+      <!-- #endregion Leadboard Section -->
+    </main>
+    <!-- #endregion Main Section -->
+
+    <footer>
+      <span>All rights reserve by StreamKar</span>
+    </footer>
+
+    <!-- #region Modals -->
+    <dialog data-modal="guide" class="modal" id="guide-modal">
+      <div class="guide-container modal-container">
+        <img
+          src="/assets/images/tag/Guide tag.png"
+          alt="Guide tag"
+          role="presentation"
+        />
+        <ul>
+          <li>
+            1.) Top 14 Dancers, 14 Singers talents have to register their ids
+            with SK employees to participate in this event.
+          </li>
+          <li>2.) Pk Battle will be held on Diwali Day.</li>
+          <li>
+            3.) Dancers and Singers need to perform for 5-6 min in the pk
+            battle, and fashion talents need to wear any traditional outfit for
+            the pk.
+          </li>
+          <li>
+            4.) PK match will be held between the talents from same category,
+            Dancer go against dancer, Singers go against singer, Fashion go
+            against fashion.
+          </li>
+          <li>
+            5.) Talents need to come live 15 min before the PK Battle, there
+            will be a 15-min official PK match scheduled for the event.
+          </li>
+          <li>
+            6.) First Talent to the left on the webpage schedule, will start the
+            performance first and will perform for first 5 – 6 Min, then next
+            talent will perform for 5 – 6 Min.
+          </li>
+          <li>
+            7.) Talents and User will be ranked on the leaderboard based on the
+            maximum beans received and spent respectively in the event.
+          </li>
+          <li>8.) Talent ranking will be separate for each category.</li>
+          <li>
+            9.) The winner of this tournament will be decided based on the beans
+            they receive in the Final Round.
+          </li>
+        </ul>
+        <form class="close-btn" method="dialog">
+          <button autofocus>
+            <img src="/assets/images/btn/cross.png" alt="Close" />
+          </button>
+        </form>
+      </div>
+    </dialog>
+    <!-- #endregion -->
+  </body>
+</html>

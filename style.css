@@ -1,0 +1,507 @@
+:root {
+  --color-primary: #0c042d;
+  --color-accent: #ffffff;
+  --color-text: #1e0e00;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::backdrop {
+  background-color: #0c042d;
+  opacity: 0.75;
+}
+
+body {
+  /* min-height: 340vh; */
+  padding-bottom: 20px;
+  font-size: 3vw;
+  color: #fff;
+  background: #3c0008 url("/assets/images/bg.jpg") center/100% 100% no-repeat;
+  position: relative;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+header img {
+  width: 100vw;
+}
+
+.guide-btn {
+  height: 40px;
+  position: fixed;
+  right: 0;
+  top: 35%;
+  z-index: 20;
+}
+.guide-btn img {
+  height: 100%;
+}
+
+.guide-container {
+  position: relative;
+}
+.guide-container ul {
+  padding-inline: 40px;
+  color: white;
+  font-size: 4vw;
+}
+.close-btn img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-block: 20px;
+}
+
+.modal {
+  border: none;
+  position: fixed;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  background-color: transparent;
+}
+.modal-container,
+.reward-container,
+.leaderboard-container {
+  width: 100%;
+  margin-top: 10px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/assets/images/Leaderboard and guide bg.png") center/100%
+    100% no-repeat;
+}
+.leaderboard-container {
+  margin-top: 20px;
+  display: none;
+  padding-inline: 8px;
+  margin-inline: 20px;
+}
+.leaderboard-container.active {
+  display: flex !important;
+}
+.reward-container {
+  background: url("/assets/images/Rewards bg.png") center/100% 100% no-repeat;
+  margin-bottom: 20px;
+}
+.modal-container > img,
+.reward-container > img,
+.schedule-tab .tag,
+.leaderboard-container .tag {
+  width: 60%;
+  transform: translateY(-14%);
+  margin-inline: auto;
+}
+.leaderboard-container .tag {
+  top: 50%;
+  transform: translateY(-50%);
+}
+main {
+  margin-top: 16px;
+}
+
+main,
+.rewards-tab,
+.leaderboard-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.leaderboard-tab {
+  padding-inline: 20px;
+}
+
+.rewards-tab .tab-header,
+.leaderboard-tab > .tab-header {
+  background: url("/assets/images/Talent user btn bg.png") center/100% 100%
+    no-repeat;
+  height: 45px;
+  width: 70%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-content {
+  display: none;
+  padding-inline: 16px;
+  width: 100%;
+}
+
+.tab-content.active {
+  display: initial;
+}
+.tab-content.reward-container.active {
+  display: flex;
+}
+
+.tab-button {
+  width: 50%;
+  height: 110%;
+  transform: scale(1.1);
+  margin-top: -5px;
+}
+
+.tab-button.user.active {
+  background: url("/assets/images/btn/User btn.png") center/100% 100% no-repeat;
+}
+
+.tab-button.talent.active {
+  background: url("/assets/images/btn/Talent btn.png") center/100% 100%
+    no-repeat;
+}
+
+.reward-slides-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reward-slides-container .info {
+  font-style: normal;
+  text-align: center;
+  font-size: 4vw;
+  color: var(--color-accent);
+}
+
+.rounds-container {
+  padding-inline: 24px;
+  background: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.reward-container {
+  min-height: 300px;
+}
+.rounds-container .tab-button {
+  width: 40%;
+  height: 40px;
+}
+
+.tab-button.round-1 {
+  background: url("/assets/images/Round 1 unselect btn.png") center/100% 100%
+    no-repeat;
+}
+
+.tab-button.round-2 {
+  background: url("/assets/images/Round 2 unselect btn.png") center/100% 100%
+    no-repeat;
+}
+
+.tab-button.round-1.active {
+  background: url("/assets/images/btn/Round 1 select btn.png") center/100% 100%
+    no-repeat;
+}
+
+.tab-button.round-2.active {
+  background: url("/assets/images/btn/Round 2 select btn.png") center/100% 100%
+    no-repeat;
+}
+
+.reward-slides {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10px;
+  min-width: 100%;
+  background: url("/assets/images/Rewards diaplay bg.png") center/100% 100%
+    no-repeat;
+  position: relative;
+}
+.reward-slides::after {
+  content: "Top 1";
+  text-transform: uppercase;
+  display: grid;
+  font-weight: 600;
+  place-items: center;
+  background: url("/assets/images/rank display.png") center/100% 100% no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 9vw;
+  transform: translate(-50%, -50%);
+  width: 30%;
+}
+.reward-slide {
+  --size: 130px;
+  width: var(--size);
+  height: calc(var(--size) + 10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-block: 20px;
+}
+.reward-slide.active {
+  display: flex;
+}
+.reward-slide img {
+  height: 80%;
+}
+.slide-btn img {
+  height: 100%;
+}
+.slide-btn {
+  --size: 34px;
+  height: var(--size);
+  width: var(--size);
+}
+.slide-btn {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translate(-50%, 30%);
+}
+.slide-btn.next {
+  left: auto;
+  right: 0;
+  transform: translate(50%, 30%);
+}
+.schedule-tab {
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 20px;
+}
+.schedule-tab .tab-header,
+.category-tab-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 45px;
+  margin-inline: 8px;
+  margin-bottom: 10px;
+  background: url("/assets/images/Category btn bg.png") center/100% 100%
+    no-repeat;
+}
+.category-tab-header {
+  margin-top: 16px;
+}
+.schedule-tab button,
+.category-tab-header button {
+  width: 30%;
+  height: 150%;
+}
+
+.tab-button.dance.active {
+  background: url("/assets/images/btn/Dance btn.png") center/100% 100% no-repeat;
+}
+.tab-button.singing.active {
+  background: url("/assets/images/btn/Singing battle btn.png") center/100% 100%
+    no-repeat;
+}
+.tab-button.fashion.active {
+  background: url("/assets/images/btn/fashion battle btn.png") center/100% 100%
+    no-repeat;
+}
+.schedule-tab .tab-content {
+  display: none;
+  padding-inline: 0;
+  width: 100%;
+}
+.schedule-tab {
+  margin-bottom: 10px;
+  padding: 12px;
+}
+.schedule-tab .tab-header {
+  margin-inline: 16px;
+  width: 94%;
+}
+.schedule-tab .dance-container {
+  min-height: auto;
+  padding-inline: 0;
+  /* height: 300px; */
+  padding-bottom: 12px;
+  background: url("/assets/images/Schedule bg.png") center/100% 100% no-repeat;
+}
+.schedule-tab .tab-content.active {
+  padding-block: 60px;
+  display: flex;
+}
+.schedule-tab .table {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  margin-inline: auto;
+  gap: 4px;
+  padding-inline: 1px;
+  overflow-y: auto;
+}
+.schedule-tab .table-header,
+.schedule-tab .table-desc {
+  color: var(--color-accent);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-inline: 20px;
+  padding-block: 4px;
+  justify-content: space-between;
+  background: url("/assets/images/Schedule table bg.png") center/100% 100%
+    no-repeat;
+  font-size: 3vw;
+  color: #f6d957;
+}
+.schedule-tab .table-header {
+  font-size: 4vw;
+  font-weight: 600;
+}
+.table-header > div,
+.table-desc > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.vs-image {
+  max-height: 24px;
+}
+
+.dance-leaderboard-container {
+  padding-bottom: 10px;
+}
+
+.beans-amount {
+  width: 56%;
+  background: url("/assets/images/Beans pot amount.png") center/100% 100%
+    no-repeat;
+  height: 50px;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.topper-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-top: 10px;
+}
+.topper-container .top {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  color: #fff;
+  padding-inline: 16px;
+  gap: 10px;
+}
+.topper-container .top-2 {
+  background: url("/assets/images/Top 2 bg.png") center/100% 100% no-repeat;
+  margin-top: 18%;
+  order: 1;
+}
+.topper-container .top-1 {
+  background: url("/assets/images/Top 1 bg.png") center/100% 100% no-repeat;
+  order: 2;
+}
+.topper-container .top-3 {
+  background: url("/assets/images/Top 3 bg.png") center/100% 100% no-repeat;
+  margin-top: 18%;
+  order: 3;
+}
+.avatar {
+  --size: 30px;
+  border-radius: 100px;
+  background-color: black;
+  border: 1px solid var(--color-accent);
+  height: var(--size);
+  width: var(--size);
+}
+.avatar img {
+  height: 100%;
+  width: 100%;
+}
+.top .avatar {
+  --size: 40px;
+  align-self: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  color: white;
+  font-weight: 600;
+}
+.bean-img {
+  max-height: 10px;
+}
+.tab-content.leaderboard-container {
+  padding-inline: 4px;
+}
+
+.winner-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 450px; */
+  align-items: center;
+  overflow-y: scroll;
+  margin-top: 16px;
+  padding-inline: 16px;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.winner-strip {
+  color: #f6d785;
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  align-items: center;
+  padding-inline: 14px;
+  /* padding-bottom: 10px; */
+  background: url("/assets/images/4th name onwards strip.png") center/100% 100%
+    no-repeat;
+  gap: 1em;
+}
+.winner-strip .info {
+  flex: 1;
+  color: inherit;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer span {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-block: 6px;
+  padding-inline: 10px;
+  border-radius: 12px;
+  color: #f6d785;
+  font-weight: bold;
+}
