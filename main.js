@@ -43,27 +43,44 @@ modalButtons.forEach((modalButton) => {
 });
 
 const slides = document.querySelectorAll(".slides");
+const slideInfo = [
+  "User recieves 25% of total beans",
+  "User recieves an Amazon gift card",
+  "User recieves a Celebration theme",
+];
 slides.forEach((slider) => {
   const allSlides = [...slider.querySelectorAll(".slide")];
   const prevBtn = slider.querySelector(".slide-btn.prev");
   const nextBtn = slider.querySelector(".slide-btn.next");
+  const slideInfoElement = slider.querySelector(".info");
+  let currentId = parseInt(slider.getAttribute("data-current"));
+
   prevBtn.addEventListener("click", () => {
     const activeSlide = slider.querySelector(".slide.active");
     activeSlide.classList.remove("active");
     if (activeSlide.previousElementSibling.classList.contains("slide")) {
       activeSlide.previousElementSibling.classList.add("active");
+      currentId -= 1;
     } else {
       allSlides[allSlides.length - 1].classList.add("active");
+      currentId = allSlides.length - 1;
     }
+
+    if (slideInfoElement) slideInfoElement.innerHTML = slideInfo[currentId];
+    slider.setAttribute("data-current", currentId);
   });
   nextBtn.addEventListener("click", () => {
     const activeSlide = slider.querySelector(".slide.active");
     activeSlide.classList.remove("active");
     if (activeSlide.nextElementSibling.classList.contains("slide")) {
       activeSlide.nextElementSibling.classList.add("active");
+      currentId += 1;
     } else {
       allSlides[0].classList.add("active");
+      currentId = 0;
     }
+    if (slideInfoElement) slideInfoElement.innerHTML = slideInfo[currentId];
+    slider.setAttribute("data-current", currentId);
   });
 });
 

@@ -257,6 +257,17 @@ main,
   justify-content: center;
   align-items: center;
   margin-block: 20px;
+  flex-direction: column;
+}
+.reward-slide span {
+  background-color: rgb(78, 23, 27, 0.8);
+  width: 80%;
+  padding-block: 4px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: #f6d957;
 }
 .reward-slide.active {
   display: flex;
